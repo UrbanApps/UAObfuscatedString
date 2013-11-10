@@ -6,6 +6,17 @@ Without some sort of obfuscation, strings like backend API methods and urls,
 API keys and other sensitive data can be extracted by utilizing various
 command-line tools such as `strings`.
 
+## How does it work?
+
+When you write code that has a string constant in it, this string is saved in the binary
+in clear text. A hacker could potentially discover exploits or change the string to 
+affect your app's behavior.
+
+UAObfuscatedString only ever stores single characters in the binary, then combines them at
+runtime to produce your string. It is highly unlikely that these single letters will be discoverable
+in the binary as they will be interjected at random places in the compiled code. Thus, they
+appear to be randomized code to anyone trying to extract strings.
+
 ## Installation
 
 1. Add `NSString+UAObfuscatedString.[h|m]` to your project. 
