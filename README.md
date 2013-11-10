@@ -28,3 +28,9 @@ but there are many places where it makes sense to hide your strings from extract
     NSString *identifier = @"".c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
     
 There are many ways to obfuscate strings, this is just one of them. Enjoy.
+
+## Open-Source Urban Apps Projects
+
+- [UAAppReviewManager](https://github.com/coneybeare/UAAppReviewManager) - An app review prompting tool for iOS and Mac App Store apps.
+- [UALogger](https://github.com/coneybeare/UALogger) - A logging utility for Mac/iOS apps
+- [UAModalPanel](https://github.com/coneybeare/UAModalPanel) - An animated modal panel alternative for iOS
