@@ -19,8 +19,8 @@ appear to be randomized code to anyone trying to extract strings.
 
 ## Installation
 
-1. Add `NSString+UAObfuscatedString.[h|m]` to your project. 
-2. Add `import "NSString+UAObfuscatedString.h"` where you want to use it.
+1. Add `NSString+UAObfuscatedString.[h|m]` to your project. `pod 'UAObfuscatedString', '0.1'`
+2. Add `import <NSString+UAObfuscatedString.h>` where you want to use it.
 
 ## Usage
 
