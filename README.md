@@ -9,10 +9,9 @@ UAObfuscatedString is a simple and lightweight category on NSString that allows 
 
 ## Usage
 
-The category is very simple to use. Each letter a-Z has been changed into a method name which appends the letter to the caller. numbers are prefixed with an underscore, and there are two special methods for space and period.
+The category is very simple to use. Each letter a-Z has been changed into a method name which appends the letter to the caller. Numbers are prefixed with an underscore, and there are two special methods for a space and a period.
 
-    NSString *root = @"";
-    NSLog(@"%@", root._1.dot.space._2.dot.space._3.dot.space.T.h.i.s.space.i.s.space.a.space.t.e.s.t.dot); 
+    NSLog(@"%@", @""._1.dot.space._2.dot.space._3.dot.space.T.h.i.s.space.i.s.space.a.space.t.e.s.t.dot); 
   
     > 1. 2. 3. This is a test.
  
