@@ -1,6 +1,10 @@
 ## UAObfuscatedString
 
-UAObfuscatedString is a simple and lightweight category on NSString that allows you to prevent sensitive strings from appearing in the binary. Without some sort of obfuscation, strings like backend API methods and urls, API keys and other sensitive data can be read by utilizing various tools such as `strings`.
+UAObfuscatedString is a simple and lightweight category on `NSString` that allows you to
+prevent sensitive strings from appearing in your compiled binary.
+Without some sort of obfuscation, strings like backend API methods and urls,
+API keys and other sensitive data can be extracted by utilizing various
+command-line tools such as `strings`.
 
 ## Installation
 
@@ -9,14 +13,17 @@ UAObfuscatedString is a simple and lightweight category on NSString that allows 
 
 ## Usage
 
-The category is very simple to use. Each letter a-Z has been changed into a method name which appends the letter to the caller. Numbers are prefixed with an underscore, and there are two special methods for a space and a period.
+The category is *very* simple to use.
+Each letter a-Z has been changed into a method name which appends the letter to the calling string.
+Numbers are prefixed with an underscore.
+There are two special methods for a space (`space` and `_`)
+and a special method for a period (`dot`).
 
-    NSLog(@"%@", @""._1.dot.space._2.dot.space._3.dot.space.T.h.i.s.space.i.s.space.a.space.t.e.s.t.dot); 
-  
-    > 1. 2. 3. This is a test.
- 
+    NSLog(@"%@", @"".T.h.i.s._.i.s._.a._.t.e.s.t.dot._._1.dot._._2.dot.space._3.dot.); 
+    > This is a test. 1. 2. 3.
 
-Usually, you will use this on things like your in-app purchase identifiers
+Usually, you will end up using this on things like your in-app purchase identifiers,
+but there are many places where it makes sense to hide your strings from extractors.
 
     NSString *identifier = @"".c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
     
