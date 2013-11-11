@@ -45,7 +45,7 @@ Using UAObfuscatedString is much more computationally expensive. Each letter is 
 to `-[NSString stringByAppendingString]`. While I haven't measure it out, I can guarantee you that if you
 use UAObfuscatedString to obfuscate a paragraph in your table view cells, your scrolling performance will be dismal.
 
-Thus, it is only recommended that you use UAObfuscatedString for smaller strings, or strings that you can cache.
+Thus, it is only recommended that you use UAObfuscatedString for shorter strings, or strings that you can cache.
 
 A good way to do this is to store your unobfuscated strings in memory on init so that they are only unobfuscated once.
 
