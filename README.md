@@ -58,7 +58,7 @@ A good way to do this is to store your unobfuscated strings in memory on init so
     }
 
 
-There are many ways to obfuscate strings, this is just one of them. Enjoy.
+You get the idea. There are many ways to obfuscate strings, this is just one of them. Enjoy.
 
 ## Open-Source Urban Apps Projects
 
