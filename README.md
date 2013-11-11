@@ -47,7 +47,7 @@ use UAObfuscatedString to obfuscate a paragraph in your table view cells, your s
 
 Thus, it is only recommended that you use UAObfuscatedString for smaller strings, or strings that you can cache.
 
-A good way to do this is to store your unobfuscated strings in memory on init so that they are only un-obfuscated once.
+A good way to do this is to store your unobfuscated strings in memory on init so that they are only unobfuscated once.
 
     - (id)init {
         if ((self = [super init])) {
