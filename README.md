@@ -37,7 +37,27 @@ Usually, you will end up using this on things like your in-app purchase identifi
 but there are many places where it makes sense to hide your strings from extractors.
 
     NSString *identifier = @"".c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
-    
+
+## Performance
+
+A regular string constant lookup is very fast. A pointer is read, and the value pulled from memory.
+Using UAObfuscatedString is much more computationally expensive. Each letter is actually a method call
+to `-[NSString stringByAppendingString]`. While I haven't measure it out, I can guarantee you that if you
+use UAObfuscatedString to obfuscate a paragraph in your table view cells, your scrolling performance will be dismal.
+
+Thus, it is only recommended that you use UAObfuscatedString for smaller strings, or strings that you can cache.
+
+A good way to do this is to store your unobfuscated strings in memory on init so that they are only un-obfuscated once.
+
+    - (id)init {
+        if ((self = [super init])) {
+            self.IAPIdentifier = @"".c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
+            self.socialSecurityNumber = ...
+        }
+        return self;
+    }
+
+
 There are many ways to obfuscate strings, this is just one of them. Enjoy.
 
 ## Open-Source Urban Apps Projects
