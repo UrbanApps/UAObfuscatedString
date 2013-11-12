@@ -77,5 +77,6 @@
 - (NSString *)_;
 - (NSString *)space;
 - (NSString *)dot;
+- (NSString *)dash;
 
 @end
