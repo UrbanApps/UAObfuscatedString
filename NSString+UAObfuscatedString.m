@@ -77,5 +77,6 @@
 - (NSString *)_ { return [self stringByAppendingString:@" "]; }
 - (NSString *)space { return [self stringByAppendingString:@" "]; }
 - (NSString *)dot { return [self stringByAppendingString:@"."]; }
+- (NSString *)dash { return [self stringByAppendingString:@"-"]; }
 
 @end
