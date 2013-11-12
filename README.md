@@ -28,7 +28,8 @@ The category is *very* simple to use.
 Each letter a-Z has been changed into a method name which appends the letter to the calling string.
 Numbers are prefixed with an underscore.
 There are two special methods for a space (`space` and `_`)
-and a special method for a period (`dot`).
+a special method for a period (`dot`),
+and a special method for a dash (`dash`).
 
     NSLog(@"%@", @"".T.h.i.s._.i.s._.a._.t.e.s.t.dot._._1.dot._._2.dot.space._3.dot.); 
     > This is a test. 1. 2. 3.
