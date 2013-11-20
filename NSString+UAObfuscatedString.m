@@ -9,6 +9,7 @@
 
 @implementation NSString (UAObfuscatedString)
 
+#pragma mark - a-z
 - (NSString *)a { return [self stringByAppendingString:@"a"]; }
 - (NSString *)b { return [self stringByAppendingString:@"b"]; }
 - (NSString *)c { return [self stringByAppendingString:@"c"]; }
@@ -36,6 +37,7 @@
 - (NSString *)y { return [self stringByAppendingString:@"y"]; }
 - (NSString *)z { return [self stringByAppendingString:@"z"]; }
 
+#pragma mark - A-Z
 - (NSString *)A { return [self stringByAppendingString:@"A"]; }
 - (NSString *)B { return [self stringByAppendingString:@"B"]; }
 - (NSString *)C { return [self stringByAppendingString:@"C"]; }
@@ -63,6 +65,7 @@
 - (NSString *)Y { return [self stringByAppendingString:@"Y"]; }
 - (NSString *)Z { return [self stringByAppendingString:@"Z"]; }
 
+#pragma mark - Numbers
 - (NSString *)_1 { return [self stringByAppendingString:@"1"]; }
 - (NSString *)_2 { return [self stringByAppendingString:@"2"]; }
 - (NSString *)_3 { return [self stringByAppendingString:@"3"]; }
@@ -74,10 +77,13 @@
 - (NSString *)_9 { return [self stringByAppendingString:@"9"]; }
 - (NSString *)_0 { return [self stringByAppendingString:@"0"]; }
 
+#pragma mark - Punctuation
 - (NSString *)space { return [self stringByAppendingString:@" "]; }
-- (NSString *)dot { return [self stringByAppendingString:@"."]; }
+- (NSString *)point { return [self stringByAppendingString:@"."]; }
 - (NSString *)dash { return [self stringByAppendingString:@"-"]; }
 
+#pragma mark - Aliases
 - (NSString *)_ { return [self space]; }
+- (NSString *)dot { return [self point]; }
 
 @end
