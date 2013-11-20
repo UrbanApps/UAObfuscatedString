@@ -104,5 +104,7 @@
 - (NSString *)bar;
 - (NSString *)less_than;
 - (NSString *)greater_than;
+- (NSString *)underscore;
+
 
 @end
