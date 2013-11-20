@@ -27,12 +27,11 @@ appear to be randomized code to anyone trying to extract strings.
 The category is *very* simple to use.
 Each letter a-Z has been changed into a method name which appends the letter to the calling string.
 Numbers are prefixed with an underscore.
-There are two special methods for a space (`space` and `_`)
-a special method for a period (`dot`),
-and other specially named methods for misc keyboard characters.
+There are methods for most keyboard characters such as `comma` and `asterisk`,
+and there are two alias methods for a space (`_`) and a period (`dot`) to help readability:
 
-    NSLog(@"%@", @"".T.h.i.s._.i.s._.a._.t.e.s.t.dot._._1.dot._._2.dot.space._3.dot.); 
-    > This is a test. 1. 2. 3.
+    NSLog(@"%@", @"".T.h.i.s._.i.s._.a._.t.e.s.t.dot); 
+    > This is a test.
 
 You can find the full list of methods and supported characters in [`NSString+UAObfuscatedString.h`](https://github.com/UrbanApps/UAObfuscatedString/blob/master/NSString%2BUAObfuscatedString.h)
 
