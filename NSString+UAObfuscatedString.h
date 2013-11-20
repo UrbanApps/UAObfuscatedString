@@ -78,5 +78,33 @@
 - (NSString *)space;
 - (NSString *)dot;
 - (NSString *)dash;
+- (NSString *)comma;
+- (NSString *)semicolon;
+- (NSString *)colon;
+- (NSString *)apostrophe;
+- (NSString *)quotation;
+- (NSString *)plus;
+- (NSString *)equals;
+- (NSString *)paren_left;
+- (NSString *)paren_right;
+- (NSString *)asterisk;
+- (NSString *)ampersand;
+- (NSString *)caret;
+- (NSString *)percent;
+- (NSString *)$;
+- (NSString *)pound;
+- (NSString *)at;
+- (NSString *)exclamation;
+- (NSString *)back_slash;
+- (NSString *)forward_slash;
+- (NSString *)curly_left;
+- (NSString *)curly_right;
+- (NSString *)bracket_left;
+- (NSString *)bracket_right;
+- (NSString *)bar;
+- (NSString *)less_than;
+- (NSString *)greater_than;
+- (NSString *)underscore;
+
 
 @end

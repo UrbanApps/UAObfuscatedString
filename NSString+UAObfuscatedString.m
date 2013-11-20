@@ -81,6 +81,33 @@
 - (NSString *)space { return [self stringByAppendingString:@" "]; }
 - (NSString *)point { return [self stringByAppendingString:@"."]; }
 - (NSString *)dash { return [self stringByAppendingString:@"-"]; }
+- (NSString *)comma { return [self stringByAppendingString:@","]; }
+- (NSString *)semicolon { return [self stringByAppendingString:@";"]; }
+- (NSString *)colon { return [self stringByAppendingString:@":"]; }
+- (NSString *)apostrophe { return [self stringByAppendingString:@"'"]; }
+- (NSString *)quotation { return [self stringByAppendingString:@"\""]; }
+- (NSString *)plus { return [self stringByAppendingString:@"+"]; }
+- (NSString *)equals { return [self stringByAppendingString:@"="]; }
+- (NSString *)paren_left { return [self stringByAppendingString:@"("]; }
+- (NSString *)paren_right { return [self stringByAppendingString:@")"]; }
+- (NSString *)asterisk { return [self stringByAppendingString:@"*"]; }
+- (NSString *)ampersand { return [self stringByAppendingString:@"&"]; }
+- (NSString *)caret { return [self stringByAppendingString:@"^"]; }
+- (NSString *)percent { return [self stringByAppendingString:@"%"]; }
+- (NSString *)$ { return [self stringByAppendingString:@"$"]; }
+- (NSString *)pound { return [self stringByAppendingString:@"#"]; }
+- (NSString *)at { return [self stringByAppendingString:@"@"]; }
+- (NSString *)exclamation { return [self stringByAppendingString:@"!"]; }
+- (NSString *)back_slash { return [self stringByAppendingString:@"\\"]; }
+- (NSString *)forward_slash { return [self stringByAppendingString:@"/"]; }
+- (NSString *)curly_left { return [self stringByAppendingString:@"{"]; }
+- (NSString *)curly_right { return [self stringByAppendingString:@"}"]; }
+- (NSString *)bracket_left { return [self stringByAppendingString:@"["]; }
+- (NSString *)bracket_right { return [self stringByAppendingString:@"]"]; }
+- (NSString *)bar { return [self stringByAppendingString:@"|"]; }
+- (NSString *)less_than { return [self stringByAppendingString:@"<"]; }
+- (NSString *)greater_than { return [self stringByAppendingString:@">"]; }
+- (NSString *)underscore { return [self stringByAppendingString:@"_"]; }
 
 #pragma mark - Aliases
 - (NSString *)_ { return [self space]; }
