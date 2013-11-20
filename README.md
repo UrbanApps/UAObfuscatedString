@@ -29,10 +29,12 @@ Each letter a-Z has been changed into a method name which appends the letter to 
 Numbers are prefixed with an underscore.
 There are two special methods for a space (`space` and `_`)
 a special method for a period (`dot`),
-and a special method for a dash (`dash`).
+and other specially named methods for misc keyboard characters.
 
     NSLog(@"%@", @"".T.h.i.s._.i.s._.a._.t.e.s.t.dot._._1.dot._._2.dot.space._3.dot.); 
     > This is a test. 1. 2. 3.
+
+You can find the full list of methods and supported characters in [`NSString+UAObfuscatedString.h`](https://github.com/UrbanApps/UAObfuscatedString/blob/master/NSString%2BUAObfuscatedString.h)
 
 Usually, you will end up using this on things like your in-app purchase identifiers,
 but there are many places where it makes sense to hide your strings from extractors.
