@@ -104,5 +104,6 @@
 - (NSString *)bar { return [self stringByAppendingString:@"|"]; }
 - (NSString *)less_than { return [self stringByAppendingString:@"<"]; }
 - (NSString *)greater_than { return [self stringByAppendingString:@">"]; }
+- (NSString *)underscore { return [self stringByAppendingString:@"_"]; }
 
 @end
