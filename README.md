@@ -64,8 +64,9 @@ You get the idea. There are many ways to obfuscate strings, this is just one of 
 
 ## Open-Source Urban Apps Projects
 
-- [UAAppReviewManager](https://github.com/coneybeare/UAAppReviewManager) - An app review prompting tool for iOS and Mac App Store apps.
-- [UALogger](https://github.com/coneybeare/UALogger) - A logging utility for Mac/iOS apps
-- [UAModalPanel](https://github.com/coneybeare/UAModalPanel) - An animated modal panel alternative for iOS
+- [Armchair](https://github.com/UrbanApps/Armchair) - A simple yet powerful App Review Manager for iOS and OSX (Swift)
+- [UAAppReviewManager](https://github.com/UrbanApps/UAAppReviewManager) - An app review prompting tool for iOS and Mac App Store apps.
+- [UALogger](https://github.com/UrbanApps/UALogger) - A logging utility for Mac/iOS apps
+- [UAModalPanel](https://github.com/UrbanApps/UAModalPanel) - An animated modal panel alternative for iOS
 - [UAProgressView](https://github.com/UrbanApps/UAProgressView) A simple and lightweight, yet powerful animated circular progress view
 - [Urban](https://github.com/UrbanApps/Urban) - An Xcode color scheme that uses a soft dark background, with subtle blue, orange and yellow colors
