@@ -7,110 +7,119 @@
 
 #import "NSString+UAObfuscatedString.h"
 
-@implementation NSString (UAObfuscatedString)
+@implementation NSString (MutableString)
+
+- (NSMutableString *)mutableString
+{
+    return [NSMutableString stringWithFormat:@"%@", self];
+}
+
+@end
+
+@implementation NSMutableString (UAObfuscatedString)
 
 #pragma mark - a-z
-- (NSString *)a { return [self stringByAppendingString:@"a"]; }
-- (NSString *)b { return [self stringByAppendingString:@"b"]; }
-- (NSString *)c { return [self stringByAppendingString:@"c"]; }
-- (NSString *)d { return [self stringByAppendingString:@"d"]; }
-- (NSString *)e { return [self stringByAppendingString:@"e"]; }
-- (NSString *)f { return [self stringByAppendingString:@"f"]; }
-- (NSString *)g { return [self stringByAppendingString:@"g"]; }
-- (NSString *)h { return [self stringByAppendingString:@"h"]; }
-- (NSString *)i { return [self stringByAppendingString:@"i"]; }
-- (NSString *)j { return [self stringByAppendingString:@"j"]; }
-- (NSString *)k { return [self stringByAppendingString:@"k"]; }
-- (NSString *)l { return [self stringByAppendingString:@"l"]; }
-- (NSString *)m { return [self stringByAppendingString:@"m"]; }
-- (NSString *)n { return [self stringByAppendingString:@"n"]; }
-- (NSString *)o { return [self stringByAppendingString:@"o"]; }
-- (NSString *)p { return [self stringByAppendingString:@"p"]; }
-- (NSString *)q { return [self stringByAppendingString:@"q"]; }
-- (NSString *)r { return [self stringByAppendingString:@"r"]; }
-- (NSString *)s { return [self stringByAppendingString:@"s"]; }
-- (NSString *)t { return [self stringByAppendingString:@"t"]; }
-- (NSString *)u { return [self stringByAppendingString:@"u"]; }
-- (NSString *)v { return [self stringByAppendingString:@"v"]; }
-- (NSString *)w { return [self stringByAppendingString:@"w"]; }
-- (NSString *)x { return [self stringByAppendingString:@"x"]; }
-- (NSString *)y { return [self stringByAppendingString:@"y"]; }
-- (NSString *)z { return [self stringByAppendingString:@"z"]; }
+- (instancetype)a { [self appendString:@"a"]; return self; }
+- (instancetype)b { [self appendString:@"b"]; return self; }
+- (instancetype)c { [self appendString:@"c"]; return self; }
+- (instancetype)d { [self appendString:@"d"]; return self; }
+- (instancetype)e { [self appendString:@"e"]; return self; }
+- (instancetype)f { [self appendString:@"f"]; return self; }
+- (instancetype)g { [self appendString:@"g"]; return self; }
+- (instancetype)h { [self appendString:@"h"]; return self; }
+- (instancetype)i { [self appendString:@"i"]; return self; }
+- (instancetype)j { [self appendString:@"j"]; return self; }
+- (instancetype)k { [self appendString:@"k"]; return self; }
+- (instancetype)l { [self appendString:@"l"]; return self; }
+- (instancetype)m { [self appendString:@"m"]; return self; }
+- (instancetype)n { [self appendString:@"n"]; return self; }
+- (instancetype)o { [self appendString:@"o"]; return self; }
+- (instancetype)p { [self appendString:@"p"]; return self; }
+- (instancetype)q { [self appendString:@"q"]; return self; }
+- (instancetype)r { [self appendString:@"r"]; return self; }
+- (instancetype)s { [self appendString:@"s"]; return self; }
+- (instancetype)t { [self appendString:@"t"]; return self; }
+- (instancetype)u { [self appendString:@"u"]; return self; }
+- (instancetype)v { [self appendString:@"v"]; return self; }
+- (instancetype)w { [self appendString:@"w"]; return self; }
+- (instancetype)x { [self appendString:@"x"]; return self; }
+- (instancetype)y { [self appendString:@"y"]; return self; }
+- (instancetype)z { [self appendString:@"z"]; return self; }
 
 #pragma mark - A-Z
-- (NSString *)A { return [self stringByAppendingString:@"A"]; }
-- (NSString *)B { return [self stringByAppendingString:@"B"]; }
-- (NSString *)C { return [self stringByAppendingString:@"C"]; }
-- (NSString *)D { return [self stringByAppendingString:@"D"]; }
-- (NSString *)E { return [self stringByAppendingString:@"E"]; }
-- (NSString *)F { return [self stringByAppendingString:@"F"]; }
-- (NSString *)G { return [self stringByAppendingString:@"G"]; }
-- (NSString *)H { return [self stringByAppendingString:@"H"]; }
-- (NSString *)I { return [self stringByAppendingString:@"I"]; }
-- (NSString *)J { return [self stringByAppendingString:@"J"]; }
-- (NSString *)K { return [self stringByAppendingString:@"K"]; }
-- (NSString *)L { return [self stringByAppendingString:@"L"]; }
-- (NSString *)M { return [self stringByAppendingString:@"M"]; }
-- (NSString *)N { return [self stringByAppendingString:@"N"]; }
-- (NSString *)O { return [self stringByAppendingString:@"O"]; }
-- (NSString *)P { return [self stringByAppendingString:@"P"]; }
-- (NSString *)Q { return [self stringByAppendingString:@"Q"]; }
-- (NSString *)R { return [self stringByAppendingString:@"R"]; }
-- (NSString *)S { return [self stringByAppendingString:@"S"]; }
-- (NSString *)T { return [self stringByAppendingString:@"T"]; }
-- (NSString *)U { return [self stringByAppendingString:@"U"]; }
-- (NSString *)V { return [self stringByAppendingString:@"V"]; }
-- (NSString *)W { return [self stringByAppendingString:@"W"]; }
-- (NSString *)X { return [self stringByAppendingString:@"X"]; }
-- (NSString *)Y { return [self stringByAppendingString:@"Y"]; }
-- (NSString *)Z { return [self stringByAppendingString:@"Z"]; }
+- (instancetype)A { [self appendString:@"A"]; return self; }
+- (instancetype)B { [self appendString:@"B"]; return self; }
+- (instancetype)C { [self appendString:@"C"]; return self; }
+- (instancetype)D { [self appendString:@"D"]; return self; }
+- (instancetype)E { [self appendString:@"E"]; return self; }
+- (instancetype)F { [self appendString:@"F"]; return self; }
+- (instancetype)G { [self appendString:@"G"]; return self; }
+- (instancetype)H { [self appendString:@"H"]; return self; }
+- (instancetype)I { [self appendString:@"I"]; return self; }
+- (instancetype)J { [self appendString:@"J"]; return self; }
+- (instancetype)K { [self appendString:@"K"]; return self; }
+- (instancetype)L { [self appendString:@"L"]; return self; }
+- (instancetype)M { [self appendString:@"M"]; return self; }
+- (instancetype)N { [self appendString:@"N"]; return self; }
+- (instancetype)O { [self appendString:@"O"]; return self; }
+- (instancetype)P { [self appendString:@"P"]; return self; }
+- (instancetype)Q { [self appendString:@"Q"]; return self; }
+- (instancetype)R { [self appendString:@"R"]; return self; }
+- (instancetype)S { [self appendString:@"S"]; return self; }
+- (instancetype)T { [self appendString:@"T"]; return self; }
+- (instancetype)U { [self appendString:@"U"]; return self; }
+- (instancetype)V { [self appendString:@"V"]; return self; }
+- (instancetype)W { [self appendString:@"W"]; return self; }
+- (instancetype)X { [self appendString:@"X"]; return self; }
+- (instancetype)Y { [self appendString:@"Y"]; return self; }
+- (instancetype)Z { [self appendString:@"Z"]; return self; }
 
 #pragma mark - Numbers
-- (NSString *)_1 { return [self stringByAppendingString:@"1"]; }
-- (NSString *)_2 { return [self stringByAppendingString:@"2"]; }
-- (NSString *)_3 { return [self stringByAppendingString:@"3"]; }
-- (NSString *)_4 { return [self stringByAppendingString:@"4"]; }
-- (NSString *)_5 { return [self stringByAppendingString:@"5"]; }
-- (NSString *)_6 { return [self stringByAppendingString:@"6"]; }
-- (NSString *)_7 { return [self stringByAppendingString:@"7"]; }
-- (NSString *)_8 { return [self stringByAppendingString:@"8"]; }
-- (NSString *)_9 { return [self stringByAppendingString:@"9"]; }
-- (NSString *)_0 { return [self stringByAppendingString:@"0"]; }
+- (instancetype)_1 { [self appendString:@"1"]; return self; }
+- (instancetype)_2 { [self appendString:@"2"]; return self; }
+- (instancetype)_3 { [self appendString:@"3"]; return self; }
+- (instancetype)_4 { [self appendString:@"4"]; return self; }
+- (instancetype)_5 { [self appendString:@"5"]; return self; }
+- (instancetype)_6 { [self appendString:@"6"]; return self; }
+- (instancetype)_7 { [self appendString:@"7"]; return self; }
+- (instancetype)_8 { [self appendString:@"8"]; return self; }
+- (instancetype)_9 { [self appendString:@"9"]; return self; }
+- (instancetype)_0 { [self appendString:@"0"]; return self; }
 
 #pragma mark - Punctuation
-- (NSString *)space { return [self stringByAppendingString:@" "]; }
-- (NSString *)point { return [self stringByAppendingString:@"."]; }
-- (NSString *)dash { return [self stringByAppendingString:@"-"]; }
-- (NSString *)comma { return [self stringByAppendingString:@","]; }
-- (NSString *)semicolon { return [self stringByAppendingString:@";"]; }
-- (NSString *)colon { return [self stringByAppendingString:@":"]; }
-- (NSString *)apostrophe { return [self stringByAppendingString:@"'"]; }
-- (NSString *)quotation { return [self stringByAppendingString:@"\""]; }
-- (NSString *)plus { return [self stringByAppendingString:@"+"]; }
-- (NSString *)equals { return [self stringByAppendingString:@"="]; }
-- (NSString *)paren_left { return [self stringByAppendingString:@"("]; }
-- (NSString *)paren_right { return [self stringByAppendingString:@")"]; }
-- (NSString *)asterisk { return [self stringByAppendingString:@"*"]; }
-- (NSString *)ampersand { return [self stringByAppendingString:@"&"]; }
-- (NSString *)caret { return [self stringByAppendingString:@"^"]; }
-- (NSString *)percent { return [self stringByAppendingString:@"%"]; }
-- (NSString *)$ { return [self stringByAppendingString:@"$"]; }
-- (NSString *)pound { return [self stringByAppendingString:@"#"]; }
-- (NSString *)at { return [self stringByAppendingString:@"@"]; }
-- (NSString *)exclamation { return [self stringByAppendingString:@"!"]; }
-- (NSString *)back_slash { return [self stringByAppendingString:@"\\"]; }
-- (NSString *)forward_slash { return [self stringByAppendingString:@"/"]; }
-- (NSString *)curly_left { return [self stringByAppendingString:@"{"]; }
-- (NSString *)curly_right { return [self stringByAppendingString:@"}"]; }
-- (NSString *)bracket_left { return [self stringByAppendingString:@"["]; }
-- (NSString *)bracket_right { return [self stringByAppendingString:@"]"]; }
-- (NSString *)bar { return [self stringByAppendingString:@"|"]; }
-- (NSString *)less_than { return [self stringByAppendingString:@"<"]; }
-- (NSString *)greater_than { return [self stringByAppendingString:@">"]; }
-- (NSString *)underscore { return [self stringByAppendingString:@"_"]; }
+- (instancetype)space         { [self appendString:@" "];  return self; }
+- (instancetype)point         { [self appendString:@"."];  return self; }
+- (instancetype)dash          { [self appendString:@"-"];  return self; }
+- (instancetype)comma         { [self appendString:@","];  return self; }
+- (instancetype)semicolon     { [self appendString:@";"];  return self; }
+- (instancetype)colon         { [self appendString:@":"];  return self; }
+- (instancetype)apostrophe    { [self appendString:@"'"];  return self; }
+- (instancetype)quotation     { [self appendString:@"\""]; return self; }
+- (instancetype)plus          { [self appendString:@"+"];  return self; }
+- (instancetype)equals        { [self appendString:@"="];  return self; }
+- (instancetype)paren_left    { [self appendString:@"("];  return self; }
+- (instancetype)paren_right   { [self appendString:@")"];  return self; }
+- (instancetype)asterisk      { [self appendString:@"*"];  return self; }
+- (instancetype)ampersand     { [self appendString:@"&"];  return self; }
+- (instancetype)caret         { [self appendString:@"^"];  return self; }
+- (instancetype)percent       { [self appendString:@"%"];  return self; }
+- (instancetype)$             { [self appendString:@"$"];  return self; }
+- (instancetype)pound         { [self appendString:@"#"];  return self; }
+- (instancetype)at            { [self appendString:@"@"];  return self; }
+- (instancetype)exclamation   { [self appendString:@"!"];  return self; }
+- (instancetype)back_slash    { [self appendString:@"\\"]; return self; }
+- (instancetype)forward_slash { [self appendString:@"/"];  return self; }
+- (instancetype)curly_left    { [self appendString:@"{"];  return self; }
+- (instancetype)curly_right   { [self appendString:@"}"];  return self; }
+- (instancetype)bracket_left  { [self appendString:@"["];  return self; }
+- (instancetype)bracket_right { [self appendString:@"]"];  return self; }
+- (instancetype)bar           { [self appendString:@"|"];  return self; }
+- (instancetype)less_than     { [self appendString:@"<"];  return self; }
+- (instancetype)greater_than  { [self appendString:@">"];  return self; }
+- (instancetype)underscore    { [self appendString:@"_"];  return self; }
 
 #pragma mark - Aliases
-- (NSString *)_ { return [self space]; }
-- (NSString *)dot { return [self point]; }
+- (instancetype)_   { return [self space]; }
+- (instancetype)dot { return [self point]; }
 
 @end
