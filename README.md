@@ -34,21 +34,28 @@ Numbers are prefixed with an underscore.
 There are methods for most keyboard characters such as `comma` and `asterisk`,
 and there are two alias methods for a space (`_`) and a period (`dot`) to help readability:
 
-    NSLog(@"%@", Obfuscated.T.h.i.s._.i.s._.a._.t.e.s.t.dot); 
+    NSLog(@"%@", UAObfuscatedString.new.T.h.i.s._.i.s._.a._.t.e.s.t.dot); 
     > This is a test.
+
+But using the included convenience macro we can make this look much nicer though:
+
+    NSLog(@"%@", Obfuscate.T.h.i.s._.i.s._.a._.t.e.s.t.dot); 
+    > This is a test.
+
+It is recommended that you use the `Obfuscate` macro for readability unless you have some reason not to.
 
 You can find the full list of methods and supported characters in [`UAObfuscatedString.h`](https://github.com/UrbanApps/UAObfuscatedString/blob/master/UAObfuscatedString.h)
 
 Usually, you will end up using this on things like your in-app purchase identifiers,
 but there are many places where it makes sense to hide your strings from extractors.
 
-    NSString *identifier = Obfuscated.c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
+    NSString *identifier = Obfuscate.c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
 
 ## Performance
 
 A regular string constant lookup is very fast. A pointer is read, and the value pulled from memory.
 Using UAObfuscatedString is more computationally expensive. Each letter is actually a method call
-to `-[NSMutableString appendString]`. While I haven't measure it out, I can guarantee you that if you
+to `-[NSMutableString appendString]`. While I haven't measure it out (contributer @nickskull [has](https://github.com/UrbanApps/UAObfuscatedString/issues/3#issuecomment-61385665)), I can guarantee you that if you
 use UAObfuscatedString to obfuscate a paragraph in your table view cells, your scrolling performance will be dismal.
 
 Thus, it is only recommended that you use UAObfuscatedString for shorter strings, or strings that you can cache.
@@ -57,7 +64,7 @@ A good way to do this is to store your unobfuscated strings in memory on init so
 
     - (id)init {
         if ((self = [super init])) {
-            self.IAPIdentifier = Obfuscated.c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
+            self.IAPIdentifier = Obfuscate.c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
             self.socialSecurityNumber = ...
         }
         return self;
