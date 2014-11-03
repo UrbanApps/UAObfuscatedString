@@ -1,24 +1,15 @@
 //
-//  NSString+UAObfuscatedString.m
+//  UAObfuscatedString.m
 //
 //  Created by Matt Coneybeare on 11/10/13.
 //  Copyright (c) 2013 Urban Apps. All rights reserved.
 //
 
-#import "NSString+UAObfuscatedString.h"
+#import "UAObfuscatedString.h"
 
-@implementation NSString (MutableString)
+@implementation UAObfuscatedString : NSMutableString
 
-- (NSMutableString *)mutableString
-{
-    return [NSMutableString stringWithFormat:@"%@", self];
-}
-
-@end
-
-@implementation NSMutableString (UAObfuscatedString)
-
-#pragma mark - a-z
+#pragma mark - a-z -
 - (instancetype)a { [self appendString:@"a"]; return self; }
 - (instancetype)b { [self appendString:@"b"]; return self; }
 - (instancetype)c { [self appendString:@"c"]; return self; }
@@ -46,7 +37,7 @@
 - (instancetype)y { [self appendString:@"y"]; return self; }
 - (instancetype)z { [self appendString:@"z"]; return self; }
 
-#pragma mark - A-Z
+#pragma mark - A-Z -
 - (instancetype)A { [self appendString:@"A"]; return self; }
 - (instancetype)B { [self appendString:@"B"]; return self; }
 - (instancetype)C { [self appendString:@"C"]; return self; }
@@ -74,7 +65,7 @@
 - (instancetype)Y { [self appendString:@"Y"]; return self; }
 - (instancetype)Z { [self appendString:@"Z"]; return self; }
 
-#pragma mark - Numbers
+#pragma mark - Numbers -
 - (instancetype)_1 { [self appendString:@"1"]; return self; }
 - (instancetype)_2 { [self appendString:@"2"]; return self; }
 - (instancetype)_3 { [self appendString:@"3"]; return self; }
@@ -86,7 +77,7 @@
 - (instancetype)_9 { [self appendString:@"9"]; return self; }
 - (instancetype)_0 { [self appendString:@"0"]; return self; }
 
-#pragma mark - Punctuation
+#pragma mark - Punctuation -
 - (instancetype)space         { [self appendString:@" "];  return self; }
 - (instancetype)point         { [self appendString:@"."];  return self; }
 - (instancetype)dash          { [self appendString:@"-"];  return self; }
@@ -118,7 +109,7 @@
 - (instancetype)greater_than  { [self appendString:@">"];  return self; }
 - (instancetype)underscore    { [self appendString:@"_"];  return self; }
 
-#pragma mark - Aliases
+#pragma mark - Aliases -
 - (instancetype)_   { return [self space]; }
 - (instancetype)dot { return [self point]; }
 

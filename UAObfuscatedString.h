@@ -1,5 +1,5 @@
 //
-//  NSString+UAObfuscatedString.h
+//  UAObfuscatedString.h
 //
 //  Created by Matt Coneybeare on 11/10/13.
 //  Copyright (c) 2013 Urban Apps. All rights reserved.
@@ -7,13 +7,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (MutableString)
+#ifndef Obfuscate
+    #define Obfuscate UAObfuscatedString.new
+#else
+    #error Obfuscate macro already defined, please rename your macro.
+#endif
 
-- (NSMutableString *)mutableString;
-
-@end
-
-@interface NSMutableString (UAObfuscatedString)
+@interface UAObfuscatedString : NSMutableString
 
 - (instancetype)a;
 - (instancetype)b;
