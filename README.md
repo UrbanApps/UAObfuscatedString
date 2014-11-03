@@ -1,6 +1,6 @@
 ## UAObfuscatedString
 
-UAObfuscatedString is a simple and lightweight category on `NSString` that allows you to
+UAObfuscatedString is a simple and lightweight subclass of `NSMutableString` that allows you to
 prevent sensitive strings from appearing in your compiled binary.
 Without some sort of obfuscation, strings like backend API methods and urls,
 API keys and other sensitive data can be extracted by utilizing various
@@ -19,32 +19,36 @@ appear to be randomized code to anyone trying to extract strings.
 
 ## Installation
 
-1. Add `NSString+UAObfuscatedString.[h|m]` to your project. `pod 'UAObfuscatedString', '0.2'`
-2. Add `import <NSString+UAObfuscatedString.h>` where you want to use it.
+**Via CocoaPods**  
+`pod 'UAObfuscatedString', '0.3'`  
+
+**Manually**  
+1. Add `UAObfuscatedString.[h|m]` to your project.  
+2. Add `import "UAObfuscatedString.h"` where you want to use it.  
 
 ## Usage
 
-The category is *very* simple to use.
+The subclass is *very* simple to use.
 Each letter a-Z has been changed into a method name which appends the letter to the calling string.
 Numbers are prefixed with an underscore.
 There are methods for most keyboard characters such as `comma` and `asterisk`,
 and there are two alias methods for a space (`_`) and a period (`dot`) to help readability:
 
-    NSLog(@"%@", @"".T.h.i.s._.i.s._.a._.t.e.s.t.dot); 
+    NSLog(@"%@", Obfuscated.T.h.i.s._.i.s._.a._.t.e.s.t.dot); 
     > This is a test.
 
-You can find the full list of methods and supported characters in [`NSString+UAObfuscatedString.h`](https://github.com/UrbanApps/UAObfuscatedString/blob/master/NSString%2BUAObfuscatedString.h)
+You can find the full list of methods and supported characters in [`UAObfuscatedString.h`](https://github.com/UrbanApps/UAObfuscatedString/blob/master/UAObfuscatedString.h)
 
 Usually, you will end up using this on things like your in-app purchase identifiers,
 but there are many places where it makes sense to hide your strings from extractors.
 
-    NSString *identifier = @"".c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
+    NSString *identifier = Obfuscated.c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
 
 ## Performance
 
 A regular string constant lookup is very fast. A pointer is read, and the value pulled from memory.
-Using UAObfuscatedString is much more computationally expensive. Each letter is actually a method call
-to `-[NSString stringByAppendingString]`. While I haven't measure it out, I can guarantee you that if you
+Using UAObfuscatedString is more computationally expensive. Each letter is actually a method call
+to `-[NSMutableString appendString]`. While I haven't measure it out, I can guarantee you that if you
 use UAObfuscatedString to obfuscate a paragraph in your table view cells, your scrolling performance will be dismal.
 
 Thus, it is only recommended that you use UAObfuscatedString for shorter strings, or strings that you can cache.
@@ -53,7 +57,7 @@ A good way to do this is to store your unobfuscated strings in memory on init so
 
     - (id)init {
         if ((self = [super init])) {
-            self.IAPIdentifier = @"".c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
+            self.IAPIdentifier = Obfuscated.c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
             self.socialSecurityNumber = ...
         }
         return self;
