@@ -55,7 +55,7 @@ but there are many places where it makes sense to hide your strings from extract
 
 A regular string constant lookup is very fast. A pointer is read, and the value pulled from memory.
 Using UAObfuscatedString is more computationally expensive. Each letter is actually a method call
-to `-[NSMutableString appendString]`. While I haven't measure it out (contributer @nickskull [has](https://github.com/UrbanApps/UAObfuscatedString/issues/3#issuecomment-61385665)), I can guarantee you that if you
+to `-[NSMutableString appendString]`. While I haven't measure it out (contributer [@nickskull](https://github.com/nickskull) [has](https://github.com/UrbanApps/UAObfuscatedString/issues/3#issuecomment-61385665)), I can guarantee you that if you
 use UAObfuscatedString to obfuscate a paragraph in your table view cells, your scrolling performance will be dismal.
 
 Thus, it is only recommended that you use UAObfuscatedString for shorter strings, or strings that you can cache.
