@@ -8,12 +8,12 @@
 #import <Foundation/Foundation.h>
 
 #ifndef Obfuscate
-    #define Obfuscate UAObfuscatedString.new
+    #define Obfuscate NSMutableString.new
 #else
     #error Obfuscate macro already defined, please rename your macro.
 #endif
 
-@interface UAObfuscatedString : NSMutableString
+@interface NSMutableString (UAObfuscatedString)
 
 - (instancetype)a;
 - (instancetype)b;
@@ -111,6 +111,5 @@
 - (instancetype)less_than;
 - (instancetype)greater_than;
 - (instancetype)underscore;
-
 
 @end

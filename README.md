@@ -1,6 +1,6 @@
 ## UAObfuscatedString
 
-UAObfuscatedString is a simple and lightweight subclass of `NSMutableString` that allows you to
+UAObfuscatedString is a simple and lightweight category of `NSMutableString` that allows you to
 prevent sensitive strings from appearing in your compiled binary.
 Without some sort of obfuscation, strings like backend API methods and urls,
 API keys and other sensitive data can be extracted by utilizing various
@@ -20,7 +20,7 @@ appear to be randomized code to anyone trying to extract strings.
 ## Installation
 
 **Via CocoaPods**  
-`pod 'UAObfuscatedString', '0.3'`  
+`pod 'UAObfuscatedString', '0.3.1'`  
 
 **Manually**  
 1. Add `UAObfuscatedString.[h|m]` to your project.  
@@ -28,13 +28,13 @@ appear to be randomized code to anyone trying to extract strings.
 
 ## Usage
 
-The subclass is *very* simple to use.
+The category is *very* simple to use.
 Each letter a-Z has been changed into a method name which appends the letter to the calling string.
 Numbers are prefixed with an underscore.
 There are methods for most keyboard characters such as `comma` and `asterisk`,
 and there are two alias methods for a space (`_`) and a period (`dot`) to help readability:
 
-    NSLog(@"%@", UAObfuscatedString.new.T.h.i.s._.i.s._.a._.t.e.s.t.dot); 
+    NSLog(@"%@", NSMutableString.new.T.h.i.s._.i.s._.a._.t.e.s.t.dot); 
     > This is a test.
 
 But using the included convenience macro we can make this look much nicer though:

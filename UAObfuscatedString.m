@@ -7,7 +7,7 @@
 
 #import "UAObfuscatedString.h"
 
-@implementation UAObfuscatedString : NSMutableString
+@implementation NSMutableString (UAObfuscatedString)
 
 #pragma mark - a-z -
 - (instancetype)a { [self appendString:@"a"]; return self; }
