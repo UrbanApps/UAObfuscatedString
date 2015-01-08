@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 #ifndef Obfuscate
-    #define Obfuscate NSMutableString.new
+    #define Obfuscate NSMutableString.string
 #else
     #error Obfuscate macro already defined, please rename your macro.
 #endif
