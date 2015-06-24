@@ -93,7 +93,7 @@
 - (instancetype)asterisk      { [self appendString:@"*"];  return self; }
 - (instancetype)ampersand     { [self appendString:@"&"];  return self; }
 - (instancetype)caret         { [self appendString:@"^"];  return self; }
-- (instancetype)percent       { [self appendString:@"%"];  return self; }
+- (instancetype)percent       { [self appendString:@"%%"]; return self; }
 - (instancetype)$             { [self appendString:@"$"];  return self; }
 - (instancetype)pound         { [self appendString:@"#"];  return self; }
 - (instancetype)at            { [self appendString:@"@"];  return self; }
