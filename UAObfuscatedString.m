@@ -98,6 +98,7 @@
 - (instancetype)pound         { [self appendString:@"#"];  return self; }
 - (instancetype)at            { [self appendString:@"@"];  return self; }
 - (instancetype)exclamation   { [self appendString:@"!"];  return self; }
+- (instancetype)question_mark { [self appendString:@"?"];  return self; }
 - (instancetype)back_slash    { [self appendString:@"\\"]; return self; }
 - (instancetype)forward_slash { [self appendString:@"/"];  return self; }
 - (instancetype)curly_left    { [self appendString:@"{"];  return self; }
