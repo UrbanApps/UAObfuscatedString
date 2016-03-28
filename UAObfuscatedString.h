@@ -50,7 +50,7 @@
 - (instancetype)F;
 - (instancetype)G;
 - (instancetype)H;
-- (instancetype)I;
+- (instancetype)_I;
 - (instancetype)J;
 - (instancetype)K;
 - (instancetype)L;

@@ -46,7 +46,7 @@
 - (instancetype)F { [self appendString:@"F"]; return self; }
 - (instancetype)G { [self appendString:@"G"]; return self; }
 - (instancetype)H { [self appendString:@"H"]; return self; }
-- (instancetype)I { [self appendString:@"I"]; return self; }
+- (instancetype)_I { [self appendString:@"I"]; return self; }
 - (instancetype)J { [self appendString:@"J"]; return self; }
 - (instancetype)K { [self appendString:@"K"]; return self; }
 - (instancetype)L { [self appendString:@"L"]; return self; }
