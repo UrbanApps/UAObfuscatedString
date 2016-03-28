@@ -34,7 +34,7 @@ Numbers are prefixed with an underscore.
 There are methods for most keyboard characters such as `comma` and `asterisk`,
 and there are two alias methods for a space (`_`) and a period (`dot`) to help readability:
 
-    NSLog(@"%@", NSMutableString.new.T.h.i.s._.i.s._.a._.t.e.s.t.dot); 
+    NSLog(@"%@", NSMutableString.string.T.h.i.s._.i.s._.a._.t.e.s.t.dot); 
     > This is a test.
 
 But using the included convenience macro we can make this look much nicer though:
