@@ -50,6 +50,9 @@
 - (instancetype)F;
 - (instancetype)G;
 - (instancetype)H;
+#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+- (instancetype)I;
+#endif
 - (instancetype)_I;
 - (instancetype)J;
 - (instancetype)K;

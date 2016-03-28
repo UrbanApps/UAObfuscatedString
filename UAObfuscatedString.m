@@ -46,6 +46,9 @@
 - (instancetype)F { [self appendString:@"F"]; return self; }
 - (instancetype)G { [self appendString:@"G"]; return self; }
 - (instancetype)H { [self appendString:@"H"]; return self; }
+#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+- (instancetype)I { return [self _I]; }
+#endif
 - (instancetype)_I { [self appendString:@"I"]; return self; }
 - (instancetype)J { [self appendString:@"J"]; return self; }
 - (instancetype)K { [self appendString:@"K"]; return self; }

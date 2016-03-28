@@ -20,7 +20,7 @@ appear to be randomized code to anyone trying to extract strings.
 ## Installation
 
 **Via CocoaPods**  
-`pod 'UAObfuscatedString', '0.3.1'`  
+`pod 'UAObfuscatedString', '0.3.2'`  
 
 **Manually**  
 1. Add `UAObfuscatedString.[h|m]` to your project.  
@@ -50,6 +50,12 @@ Usually, you will end up using this on things like your in-app purchase identifi
 but there are many places where it makes sense to hide your strings from extractors.
 
     NSString *identifier = Obfuscate.c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
+
+## "I" on Mac OS X
+
+The OS X 10.11 SDK includes a macro already that is defined under `I`, so this character has an underscore in UAObfuscatedString when compiled for Mac. iOS-only compilation can still use `I`.
+
+    - (instancetype)_I;
 
 ## Performance
 
