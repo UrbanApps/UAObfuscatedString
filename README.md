@@ -51,6 +51,19 @@ but there are many places where it makes sense to hide your strings from extract
 
     NSString *identifier = Obfuscate.c.o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e;
 
+## Swift Usage
+
+While similar to the Objective-C implementation, the Swift usage is slightly different. You will simply start with the first character as a string literal and then add the rest as usual. You won't, however, be able to use the underscore (_) to represent a space since the underscore is used by Swift to mean a discaded variable (typically used when using a named variable instead would generate a warning in Xcode). The example code from the Usage section above looks like this using the Swift implementation.
+
+    print("T".h.i.s.space.i.s.space.a.space.t.e.s.t.dot)
+    > This is a test.
+
+Or
+
+    let identifier = "c".o.m.dot.u.r.b.a.n.a.p.p.s.dot.e.x.a.m.p.l.e
+    > com.urbanapps.example
+
+
 ## "I" on Mac OS X
 
 The OS X 10.11 SDK includes a macro already that is defined under `I`, so this character has an underscore in UAObfuscatedString when compiled for Mac. iOS-only compilation can still use `I`.
