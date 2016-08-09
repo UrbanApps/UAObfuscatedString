@@ -112,6 +112,7 @@
 - (instancetype)less_than     { [self appendString:@"<"];  return self; }
 - (instancetype)greater_than  { [self appendString:@">"];  return self; }
 - (instancetype)underscore    { [self appendString:@"_"];  return self; }
+- (instancetype)new_line      { [self appendString:@"\n"]; return self; }
 
 #pragma mark - Aliases -
 - (instancetype)_   { return [self space]; }

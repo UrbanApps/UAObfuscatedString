@@ -115,5 +115,6 @@
 - (instancetype)less_than;
 - (instancetype)greater_than;
 - (instancetype)underscore;
+- (instancetype)new_line;
 
 @end
