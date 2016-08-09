@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    is_swift = args.platform != default_lang
+    is_swift = args.lang != default_lang
 
     obfuscated_string = ''
     if not is_swift:
