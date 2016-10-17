@@ -6,7 +6,7 @@
 //
 
 // MARK: - a-z -
-extension String {
+public extension String {
     var a : String { get { return self + "a" } }
     var b : String { get { return self + "b" } }
     var c : String { get { return self + "c" } }
@@ -36,7 +36,7 @@ extension String {
 }
 
 // MARK: - A-Z -
-extension String {
+public extension String {
     var A : String { get { return self + "A" } }
     var B : String { get { return self + "B" } }
     var C : String { get { return self + "C" } }
@@ -66,7 +66,7 @@ extension String {
 }
 
 // MARK: - Numbers -
-extension String {
+public extension String {
     var _1 : String { get { return self + "1" } }
     var _2 : String { get { return self + "2" } }
     var _3 : String { get { return self + "3" } }
@@ -81,7 +81,7 @@ extension String {
 }
 
 // MARK: - Punctuation -
-extension String {
+public extension String {
     var space         : String { get { return self + " " } }
     var point         : String { get { return self + "." } }
     var dash          : String { get { return self + "-" } }
@@ -116,7 +116,7 @@ extension String {
 }
 
 // MARK: - Aliases -
-extension String {
+public extension String {
     var dot         : String { get { return point } }
 }
 
