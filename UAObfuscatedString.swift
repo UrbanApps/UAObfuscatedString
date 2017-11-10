@@ -35,7 +35,7 @@ public extension String {
     var z : String { get { return self + "z" } }
 }
 
-public extension NSMutableString {
+@objc public extension NSMutableString {
     var a : NSMutableString { get { append("a"); return self } }
     var b : NSMutableString { get { append("b"); return self } }
     var c : NSMutableString { get { append("c"); return self } }
@@ -94,7 +94,7 @@ public extension String {
     var Z : String { get { return self + "Z" } }
 }
 
-public extension NSMutableString {
+@objc public extension NSMutableString {
     var A : NSMutableString { get { append("A"); return self } }
     var B : NSMutableString { get { append("B"); return self } }
     var C : NSMutableString { get { append("C"); return self } }
@@ -137,7 +137,7 @@ public extension String {
     var _0 : String { get { return self + "0" } }
 }
 
-public extension NSMutableString {
+@objc public extension NSMutableString {
     var _1 : NSMutableString { get { append("1"); return self } }
     var _2 : NSMutableString { get { append("2"); return self } }
     var _3 : NSMutableString { get { append("3"); return self } }
@@ -185,7 +185,7 @@ public extension String {
     var underscore    : String { get { return self + "_" } }
 }
 
-public extension NSMutableString {
+@objc public extension NSMutableString {
     var space         : NSMutableString { get { append(" "); return self } }
     var point         : NSMutableString { get { append("."); return self } }
     var dash          : NSMutableString { get { append("-"); return self } }
@@ -224,6 +224,6 @@ public extension String {
     var dot         : String { get { return point } }
 }
 
-public extension NSMutableString {
+@objc public extension NSMutableString {
     var dot         : NSMutableString { get { return point } }
 }
