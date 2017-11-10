@@ -225,5 +225,5 @@ public extension String {
 }
 
 public extension NSMutableString {
-    var dot         : NSMutableString { get { append(point); return self } }
+    var dot         : NSMutableString { get { return point } }
 }
