@@ -6,7 +6,7 @@
 //
 
 // MARK: - a-z -
-public extension String {
+@objc public extension String {
     var a : String { get { return self + "a" } }
     var b : String { get { return self + "b" } }
     var c : String { get { return self + "c" } }
@@ -36,7 +36,7 @@ public extension String {
 }
 
 // MARK: - A-Z -
-public extension String {
+@objc public extension String {
     var A : String { get { return self + "A" } }
     var B : String { get { return self + "B" } }
     var C : String { get { return self + "C" } }
@@ -66,7 +66,7 @@ public extension String {
 }
 
 // MARK: - Numbers -
-public extension String {
+@objc public extension String {
     var _1 : String { get { return self + "1" } }
     var _2 : String { get { return self + "2" } }
     var _3 : String { get { return self + "3" } }
@@ -81,7 +81,7 @@ public extension String {
 }
 
 // MARK: - Punctuation -
-public extension String {
+@objc public extension String {
     var space         : String { get { return self + " " } }
     var point         : String { get { return self + "." } }
     var dash          : String { get { return self + "-" } }
@@ -98,7 +98,7 @@ public extension String {
     var ampersand     : String { get { return self + "&" } }
     var caret         : String { get { return self + "^" } }
     var percent       : String { get { return self + "%" } }
-    var $             : String { get { return self + "$" } }
+    var `$`           : String { get { return self + "$" } }
     var pound         : String { get { return self + "#" } }
     var at            : String { get { return self + "@" } }
     var exclamation   : String { get { return self + "!" } }
@@ -116,7 +116,7 @@ public extension String {
 }
 
 // MARK: - Aliases -
-public extension String {
+@objc public extension String {
     var dot         : String { get { return point } }
 }
 
